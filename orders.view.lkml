@@ -24,6 +24,10 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    link: {
+      label: "filter on status"
+      url:"/dashboards/2?Status={{ value }}&ID={{ _filters['user_id'] }}"
+    }
   }
 
   dimension: user_id {

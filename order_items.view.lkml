@@ -42,4 +42,15 @@ view: order_items {
     type: count
     drill_fields: [id, inventory_items.id, orders.id]
   }
+
+#   measure: variable_id {
+#     type: number
+#     sql:  {% if ${sale_price}._is_filtered %}
+#             ${order_id}
+#           {% if ${sale_price}._is_filtered AND ${order_id}._is_filtered %}
+#             ${inventory_item_id}
+#           {% else %}
+#             ${id}
+#           {% endif %} ;;
+#   }
 }
