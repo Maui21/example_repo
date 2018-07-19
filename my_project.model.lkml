@@ -4,7 +4,7 @@ connection: "my_database_connection"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+# include: "*.dashboard"
 
 datagroup: my_project_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
